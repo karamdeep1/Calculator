@@ -1,0 +1,14 @@
+.button {
+    -fx-background-color: #1E90FF; /* Royal blue */
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+.button:hover {
+    -fx-background-color: #4169E1; /* Darker royal blue */
+}
+.button:pressed {
+    -fx-background-color: #000080; /* Even darker royal blue */
+}
