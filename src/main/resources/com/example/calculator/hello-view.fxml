@@ -11,52 +11,63 @@
    <top>
       <VBox prefHeight="100.0" prefWidth="321.0" style="-fx-background-color: #FFCBA4;" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" prefHeight="47.0" prefWidth="321.0" stylesheets="@../../../../../style.css" text="Calculator">
+            <Label fx:id="titleLabel" alignment="CENTER" prefHeight="47.0" prefWidth="321.0" stylesheets="@../../../../../style.css" text="Calculator">
                <font>
                   <Font name="System Bold" size="32.0" />
                </font>
             </Label>
-            <Label prefHeight="115.0" prefWidth="321.0" stylesheets="@../../../../../style.css" />
+            <Label fx:id="calcBoardLabel" prefHeight="115.0" prefWidth="321.0" stylesheets="@../../../../../style.css" text="0">
+               <font>
+                  <Font size="25.0" />
+               </font></Label>
          </children>
       </VBox>
    </top>
    <center>
       <AnchorPane prefHeight="343.0" prefWidth="201.0" style="-fx-background-color: #FFCBA4;" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="CLEAR" />
-            <Button layoutX="134.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="\%" />
-            <Button layoutX="67.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="+/-" />
-            <Button layoutY="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="9" />
-            <Button layoutX="67.0" layoutY="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="8" />
-            <Button layoutX="134.0" layoutY="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="7" />
-            <Button layoutY="76.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="6" />
-            <Button layoutX="67.0" layoutY="76.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="5" />
-            <Button layoutX="134.0" layoutY="76.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="4" />
-            <Button layoutY="114.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="3" />
-            <Button layoutX="67.0" layoutY="114.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="2" />
-            <Button layoutX="134.0" layoutY="114.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="1" />
-            <Button layoutY="152.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="134.0" stylesheets="@../../../../../style.css" text="0" />
-            <Button layoutX="134.0" layoutY="152.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="." />
+            <AnchorPane>
+               <children>
+                  <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearBoard" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="CLEAR" />
+                  <Button fx:id="percentageButton" layoutX="134.0" mnemonicParsing="false" onAction="#percentBoard" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="\%" />
+                  <Button fx:id="numberSignButton" layoutX="67.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="+/-" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchorPane" layoutY="38.0">
+               <children>
+                  <Button fx:id="nineButton" mnemonicParsing="false" onAction="#putNumOnBoard" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="9" />
+                  <Button fx:id="eightButton" layoutX="67.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="8" />
+                  <Button fx:id="sevenButton" layoutX="134.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="7" />
+                  <Button fx:id="sixButton" layoutY="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="6" />
+                  <Button fx:id="fiveButton" layoutX="67.0" layoutY="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="5" />
+                  <Button fx:id="fourButton" layoutX="134.0" layoutY="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="4" />
+                  <Button fx:id="threeButton" layoutY="76.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="3" />
+                  <Button fx:id="twoButton" layoutX="67.0" layoutY="76.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="2" />
+                  <Button fx:id="oneButton" layoutX="134.0" layoutY="76.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="1" />
+                  <Button fx:id="zeroButton" layoutY="114.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="134.0" stylesheets="@../../../../../style.css" text="0" />
+                  <Button fx:id="decimalPointButton" layoutX="134.0" layoutY="114.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="." />
+               </children>
+            </AnchorPane>
          </children></AnchorPane>
    </center>
    <left>
       <VBox prefHeight="343.0" prefWidth="60.0" style="-fx-background-color: #FFCBA4;" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="√" />
-            <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="x^2" />
-            <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="sin" />
-            <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="cos" />
-            <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="tan" />
+            <Button fx:id="squareRootButton" mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="√" />
+            <Button fx:id="squaredButton" mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="x^2" />
+            <Button fx:id="sinButton" mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="sin" />
+            <Button fx:id="cosButton" mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="cos" />
+            <Button fx:id="tanButton" mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="tan" />
          </children></VBox>
    </left>
    <right>
       <VBox prefHeight="343.0" prefWidth="60.0" style="-fx-background-color: #FFCBA4;" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="+" />
-            <Button layoutY="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="-" />
-            <Button layoutY="76.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="*" />
-            <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="/" />
-            <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="=" />
+            <Button fx:id="additionButton" mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="+" />
+            <Button fx:id="subractButton" layoutY="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="-" />
+            <Button fx:id="multiplyButton" layoutY="76.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="*" />
+            <Button fx:id="divideButton" mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="/" />
+            <Button fx:id="equalButton" mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="=" />
          </children>
       </VBox>
    </right>
