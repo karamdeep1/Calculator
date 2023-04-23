@@ -30,7 +30,7 @@
                <children>
                   <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearBoard" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="CLEAR" />
                   <Button fx:id="percentageButton" layoutX="134.0" mnemonicParsing="false" onAction="#percentBoard" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="\%" />
-                  <Button fx:id="numberSignButton" layoutX="67.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="+/-" />
+                  <Button fx:id="numberSignButton" layoutX="67.0" mnemonicParsing="false" onAction="#operationsBoard" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="+/-" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="anchorPane" layoutY="38.0">
@@ -63,11 +63,11 @@
    <right>
       <VBox prefHeight="343.0" prefWidth="60.0" style="-fx-background-color: #FFCBA4;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="additionButton" mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="+" />
-            <Button fx:id="subractButton" layoutY="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="-" />
-            <Button fx:id="multiplyButton" layoutY="76.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="*" />
-            <Button fx:id="divideButton" mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="/" />
-            <Button fx:id="equalButton" mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="=" />
+            <Button fx:id="additionButton" mnemonicParsing="false" onAction="#operationsBoard" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="+" />
+            <Button fx:id="subtractButton" layoutY="38.0" mnemonicParsing="false" onAction="#operationsBoard" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="-" />
+            <Button fx:id="multiplyButton" layoutY="76.0" mnemonicParsing="false" onAction="#operationsBoard" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="*" />
+            <Button fx:id="divideButton" mnemonicParsing="false" onAction="#operationsBoard" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="/" />
+            <Button fx:id="equalButton" mnemonicParsing="false" onAction="#equalsBoard" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="=" />
          </children>
       </VBox>
    </right>
