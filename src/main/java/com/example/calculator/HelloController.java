@@ -84,6 +84,9 @@ public class HelloController extends HelloApplication{
                     return;
                 }
             }
+            if(expression.length() == 1 && expression.equals("0")){
+                expression = "";
+            }
             expression += ((Button) event.getSource()).getText();
             calcBoardLabel.setText(expression);
         };
@@ -106,6 +109,7 @@ public class HelloController extends HelloApplication{
             percentageButton.setOnMouseClicked(event -> {
                 double percent = Double.parseDouble(calcBoardLabel.getText()) / 100;
                 calcBoardLabel.setText(String.valueOf(percent));
+                expression = calcBoardLabel.getText();
             });
         }
     }
