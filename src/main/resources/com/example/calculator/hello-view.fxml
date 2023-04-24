@@ -36,15 +36,15 @@
             <AnchorPane fx:id="anchorPane" layoutY="38.0">
                <children>
                   <Button fx:id="nineButton" mnemonicParsing="false" onAction="#putNumOnBoard" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="9" />
-                  <Button fx:id="eightButton" layoutX="67.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="8" />
-                  <Button fx:id="sevenButton" layoutX="134.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="7" />
-                  <Button fx:id="sixButton" layoutY="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="6" />
-                  <Button fx:id="fiveButton" layoutX="67.0" layoutY="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="5" />
-                  <Button fx:id="fourButton" layoutX="134.0" layoutY="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="4" />
-                  <Button fx:id="threeButton" layoutY="76.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="3" />
-                  <Button fx:id="twoButton" layoutX="67.0" layoutY="76.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="2" />
-                  <Button fx:id="oneButton" layoutX="134.0" layoutY="76.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="1" />
-                  <Button fx:id="zeroButton" layoutY="114.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="134.0" stylesheets="@../../../../../style.css" text="0" />
+                  <Button fx:id="eightButton" layoutX="67.0" mnemonicParsing="false" onAction="#putNumOnBoard" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="8" />
+                  <Button fx:id="sevenButton" layoutX="134.0" mnemonicParsing="false" onAction="#putNumOnBoard" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="7" />
+                  <Button fx:id="sixButton" layoutY="38.0" mnemonicParsing="false" onAction="#putNumOnBoard" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="6" />
+                  <Button fx:id="fiveButton" layoutX="67.0" layoutY="38.0" mnemonicParsing="false" onAction="#putNumOnBoard" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="5" />
+                  <Button fx:id="fourButton" layoutX="134.0" layoutY="38.0" mnemonicParsing="false" onAction="#putNumOnBoard" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="4" />
+                  <Button fx:id="threeButton" layoutY="76.0" mnemonicParsing="false" onAction="#putNumOnBoard" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="3" />
+                  <Button fx:id="twoButton" layoutX="67.0" layoutY="76.0" mnemonicParsing="false" onAction="#putNumOnBoard" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="2" />
+                  <Button fx:id="oneButton" layoutX="134.0" layoutY="76.0" mnemonicParsing="false" onAction="#putNumOnBoard" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="1" />
+                  <Button fx:id="zeroButton" layoutY="114.0" mnemonicParsing="false" onAction="#putNumOnBoard" prefHeight="38.0" prefWidth="134.0" stylesheets="@../../../../../style.css" text="0" />
                   <Button fx:id="decimalPointButton" layoutX="134.0" layoutY="114.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" stylesheets="@../../../../../style.css" text="." />
                </children>
             </AnchorPane>

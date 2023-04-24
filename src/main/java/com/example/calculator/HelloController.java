@@ -1,5 +1,6 @@
 package com.example.calculator;
 
+import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -77,7 +78,13 @@ public class HelloController extends HelloApplication{
     String expression = "";
     public void putNumOnBoard(ActionEvent e) throws IOException {
         EventHandler<MouseEvent> buttonClickHandler = event -> {
-            expression += ((Button)event.getSource()).getText();
+            String buttonText = ((Button) event.getSource()).getText();
+            if (buttonText.equals(".")) {
+                if (expression.contains(".")) {
+                    return;
+                }
+            }
+            expression += ((Button) event.getSource()).getText();
             calcBoardLabel.setText(expression);
         };
         for(Node node : anchorPane.getChildren()){
@@ -157,7 +164,7 @@ public class HelloController extends HelloApplication{
                 }
             });
             sinButton.setOnMouseClicked(event ->{
-                if(!(calcBoardLabel.getText().contains("+") || calcBoardLabel.getText().contains("-") || calcBoardLabel.getText().contains("*") || calcBoardLabel.getText().contains("/"))){
+                if(!(calcBoardLabel.getText().contains("+") || calcBoardLabel.getText().substring(1).contains("-") || calcBoardLabel.getText().contains("*") || calcBoardLabel.getText().contains("/"))){
                     double num = Double.parseDouble(calcBoardLabel.getText());
                     num = Math.sin(num);
                     calcBoardLabel.setText(String.valueOf(num));
@@ -165,7 +172,7 @@ public class HelloController extends HelloApplication{
                 }
             });
             cosButton.setOnMouseClicked(event ->{
-                if(!(calcBoardLabel.getText().contains("+") || calcBoardLabel.getText().contains("-") || calcBoardLabel.getText().contains("*") || calcBoardLabel.getText().contains("/"))){
+                if(!(calcBoardLabel.getText().contains("+") || calcBoardLabel.getText().substring(1).contains("-") || calcBoardLabel.getText().contains("*") || calcBoardLabel.getText().contains("/"))){
                     double num = Double.parseDouble(calcBoardLabel.getText());
                     num = Math.cos(num);
                     calcBoardLabel.setText(String.valueOf(num));
@@ -173,7 +180,7 @@ public class HelloController extends HelloApplication{
                 }
             });
             tanButton.setOnMouseClicked(event ->{
-                if(!(calcBoardLabel.getText().contains("+") || calcBoardLabel.getText().contains("-") || calcBoardLabel.getText().contains("*") || calcBoardLabel.getText().contains("/"))){
+                if(!(calcBoardLabel.getText().contains("+") || calcBoardLabel.getText().substring(1).contains("-") || calcBoardLabel.getText().contains("*") || calcBoardLabel.getText().contains("/"))){
                     double num = Double.parseDouble(calcBoardLabel.getText());
                     num = Math.tan(num);
                     calcBoardLabel.setText(String.valueOf(num));
