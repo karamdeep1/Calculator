@@ -53,11 +53,11 @@
    <left>
       <VBox prefHeight="343.0" prefWidth="60.0" style="-fx-background-color: #FFCBA4;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="squareRootButton" mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="√" />
-            <Button fx:id="squaredButton" mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="x^2" />
-            <Button fx:id="sinButton" mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="sin" />
-            <Button fx:id="cosButton" mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="cos" />
-            <Button fx:id="tanButton" mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="tan" />
+            <Button fx:id="squareRootButton" mnemonicParsing="false" onAction="#operationsBoard" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="√" />
+            <Button fx:id="squaredButton" mnemonicParsing="false" onAction="#operationsBoard" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="x^2" />
+            <Button fx:id="sinButton" mnemonicParsing="false" onAction="#operationsBoard" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="sin" />
+            <Button fx:id="cosButton" mnemonicParsing="false" onAction="#operationsBoard" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="cos" />
+            <Button fx:id="tanButton" mnemonicParsing="false" onAction="#operationsBoard" prefHeight="38.0" prefWidth="60.0" stylesheets="@../../../../../style.css" text="tan" />
          </children></VBox>
    </left>
    <right>
