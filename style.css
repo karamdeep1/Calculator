@@ -1,14 +1,17 @@
+/* for all buttons */
 .button {
-    -fx-background-color: #1E90FF; /* Royal blue */
-    -fx-border-radius: 5px;
-    -fx-background-radius: 5px;
-    -fx-text-fill: white;
-    -fx-font-size: 14px;
-    -fx-font-weight: bold;
+    -fx-background-color: #1E90FF; /* royal blue */
+    -fx-border-radius: 5px; /* sets border radius to 5 pixels */
+    -fx-background-radius: 5px; /* sets background radius to 5 pixels */
+    -fx-text-fill: white; /* makes the text white */
+    -fx-font-size: 14px; /* sets the font size to be 14 pixels */
+    -fx-font-weight: bold; /* makes the font bold */
 }
+/* for when user hovers over the button */
 .button:hover {
-    -fx-background-color: #4169E1; /* Darker royal blue */
+    -fx-background-color: #4169E1; /* darker royal blue */
 }
+/* for when user presses the button */
 .button:pressed {
-    -fx-background-color: #000080; /* Even darker royal blue */
+    -fx-background-color: #000080; /* even darker royal blue */
 }
