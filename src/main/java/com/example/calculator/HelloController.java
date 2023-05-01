@@ -165,6 +165,7 @@ public class HelloController extends HelloApplication{
             sinButton.setOnMouseClicked(event ->{
                 if(!(calcBoardLabel.getText().contains("+") || calcBoardLabel.getText().substring(1).contains("-") || calcBoardLabel.getText().contains("*") || calcBoardLabel.getText().contains("/"))){
                     double num = Double.parseDouble(calcBoardLabel.getText());
+                    num = Math.toRadians(num);
                     num = Math.sin(num);
                     calcBoardLabel.setText(String.valueOf(num));
                     expression = calcBoardLabel.getText();
@@ -174,6 +175,7 @@ public class HelloController extends HelloApplication{
             cosButton.setOnMouseClicked(event ->{
                 if(!(calcBoardLabel.getText().contains("+") || calcBoardLabel.getText().substring(1).contains("-") || calcBoardLabel.getText().contains("*") || calcBoardLabel.getText().contains("/"))){
                     double num = Double.parseDouble(calcBoardLabel.getText());
+                    num = Math.toRadians(num);
                     num = Math.cos(num);
                     calcBoardLabel.setText(String.valueOf(num));
                     expression = calcBoardLabel.getText();
@@ -183,6 +185,7 @@ public class HelloController extends HelloApplication{
             tanButton.setOnMouseClicked(event ->{
                 if(!(calcBoardLabel.getText().contains("+") || calcBoardLabel.getText().substring(1).contains("-") || calcBoardLabel.getText().contains("*") || calcBoardLabel.getText().contains("/"))){
                     double num = Double.parseDouble(calcBoardLabel.getText());
+                    num = Math.toRadians(num);
                     num = Math.tan(num);
                     calcBoardLabel.setText(String.valueOf(num));
                     expression = calcBoardLabel.getText();
