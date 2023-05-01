@@ -19,5 +19,8 @@ To contribute to the project one can include trigonometric functions.
 Karamdeep Bassi
 https://github.com/karamdeep1
 
+# Version History
+Java 20.0.1
+
 # License
 This project is licensed under MIT License - see the 'LICENSE' file for details.
