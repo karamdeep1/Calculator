@@ -1,5 +1,5 @@
 # Calculator
-Simple calculator
+Simple trigonometric calculator
 
 # Description
 This is a basic calculator built using JavaFX. The calculator has addition, subtraction, multiplication, division, positive/negative, sin, cos, tan, square root,
@@ -13,7 +13,7 @@ The calculator has a user friendly interface with buttons for each digit and ari
 in the order you want. The app only supports 2 operations at a time so future releases will contribute to fixing that.
 
 # Contributions
-To contribute to the project one can include trigonometric functions. 
+To contribute to the project one can include more functions
 
 # Author
 Karamdeep Bassi
