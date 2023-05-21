@@ -23,4 +23,4 @@ https://github.com/karamdeep1
 Java 20.0.1
 
 # License
-This project is licensed under MIT License - see the 'LICENSE' file for details.
+This project is licensed under MIT License - see the `LICENSE` file for details.
